@@ -1,0 +1,9 @@
+
+<IfModule mod_rewrite.c>
+options -multiviews
+RewriteEngine on
+RewriteBase /Safola-Project/public/
+Rewritecond %{REQUEST_FILENAME} !-d
+Rewritecond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
+</IfModule>
